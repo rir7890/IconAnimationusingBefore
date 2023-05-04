@@ -1,0 +1,65 @@
+body,html{
+    margin: 0;
+    padding: 0;
+}
+ :root{
+    --bg-color:rgb(9, 169, 255);
+} 
+/* .container{
+    display: flex;
+    font-size: 30px;
+    width: 170px;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-color);
+
+}
+.container div{
+    border: 2px solid black;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    color: blue;
+} */
+.container{
+    position: absolute;
+    width: 170px;
+    display: flex;
+    font-size: 30px;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+} 
+.container div{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: rgb(50, 48, 48);
+    border: 2px solid rgb(98, 98, 142);
+    border-radius: 50%;
+    overflow: hidden;
+    transition: .5s;
+    color: rgb(115, 134, 197);
+    z-index: 1;
+}   
+.container div:hover{
+    color: var(--bg-color);
+}
+.container div::before{
+    content: '';
+    position:absolute;
+    top: 0;
+    left: 0;
+    width:0;
+    height: 100%;
+    background: red;
+    z-index: -1;
+    transition: 1s ease-in-out;
+}
+.container div:hover::before{
+    width: 100%;
+}
